@@ -32,6 +32,8 @@ class IpUtils
      * @param string|array $ips       List of IPs or subnets (can be a string if only a single one)
      *
      * @return bool Whether the IP is valid
+     *
+     * @throws \RuntimeException When checking IPV6 addresses and IPV6 support is not enabled
      */
     public static function checkIp($requestIp, $ips)
     {
